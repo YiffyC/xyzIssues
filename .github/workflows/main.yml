@@ -10,4 +10,4 @@ jobs:
   uses: pozil/auto-assign-issue@v1.11.0
 with:
           repo-token: ${{ secrets.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 }}
-          assignees: ycpk
+          assignees: YiffyC
