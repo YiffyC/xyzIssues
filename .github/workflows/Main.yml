@@ -1,13 +1,16 @@
-on:
-   issues:
-     types: [opened]
+name: Issue assignment
 
- jobs:
-   auto-assign:
-     runs-on: ubuntu-latest
-     steps:
-       - name: 'Auto-assign issue'
-         uses: pozil/auto-assign-issue@v1.11.0
-         with:
-           repo-token: ${{ secrets.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 }}
-           assignees: YiffyC
+on:
+    issues:
+        types: [opened]
+
+jobs:
+    auto-assign:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 'Auto-assign issue'
+              uses: pozil/auto-assign-issue@v1.11.0
+              with:
+                  assignees: YiffyC
+                  numOfAssignee: 1
+                  allowSelfAssign: true
